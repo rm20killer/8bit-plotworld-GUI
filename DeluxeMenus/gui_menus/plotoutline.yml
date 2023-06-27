@@ -1,0 +1,427 @@
+#plotsquared GUI
+
+menu_title: '&c&l⚠⚠ &8&lChange Outline &c&l⚠⚠'
+open_command: plotoutline
+
+size: 45
+items:
+  back:
+    material: OAK_DOOR
+    data: 0
+    slot: 36
+    display_name: '&6&l< &e&lBack'
+    lore:
+    - '&c➥ &7Click to return to settings menu.'
+    left_click_commands:
+    - '[openguimenu] plotsettings'
+    right_click_commands:
+    - '[openguimenu] plotsettings'
+  glass:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 0
+    slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+    display_name: '&r'
+  plothead:
+    material: head-%plotsquared_currentplot_owner%
+    data: 0
+    slot: 4
+    display_name: '&6%plotsquared_currentplot_owner% plot'
+    lore:
+    - '&cCreated &7%plotsquared_currentplot_creationdate%.'
+    - '&cID &7%plotsquared_currentplot_xy%'
+    - '&cBiome: &7%plotsquared_currentplot_biome%'
+  BARRIER_block:
+    material: BARRIER
+    amount: 1
+    slot: 9
+    display_name: '&8&l■ &bMinecraft:air &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:air&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:air'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:air'
+    - '[close]'
+  GRASS_BLOCK_block:
+    material: GRASS_BLOCK
+    amount: 1
+    slot: 10
+    display_name: '&8&l■ &bMinecraft:grass block &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:grass block&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:grass_block'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:grass_block'
+    - '[close]'
+  DIRT_block:
+    material: DIRT
+    amount: 1
+    slot: 11
+    display_name: '&8&l■ &bMinecraft:dirt &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:dirt&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:dirt'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:dirt'
+    - '[close]'
+  PODZOL_block:
+    material: PODZOL
+    amount: 1
+    slot: 12
+    display_name: '&8&l■ &bMinecraft:podzol &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:podzol&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:podzol'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:podzol'
+    - '[close]'
+  MYCELIUM_block:
+    material: MYCELIUM
+    amount: 1
+    slot: 13
+    display_name: '&8&l■ &bMinecraft:mycelium &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:mycelium&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:mycelium'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:mycelium'
+    - '[close]'
+  COARSE_DIRT_block:
+    material: COARSE_DIRT
+    amount: 1
+    slot: 14
+    display_name: '&8&l■ &bMinecraft:coarse dirt &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:coarse dirt&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:coarse_dirt'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:coarse_dirt'
+    - '[close]'
+  STONE_block:
+    material: STONE
+    amount: 1
+    slot: 15
+    display_name: '&8&l■ &bMinecraft:stone &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:stone&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:stone'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:stone'
+    - '[close]'
+  COBBLESTONE_block:
+    material: COBBLESTONE
+    amount: 1
+    slot: 16
+    display_name: '&8&l■ &bMinecraft:cobblestone &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:cobblestone&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:cobblestone'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:cobblestone'
+    - '[close]'
+  GRAVEL_block:
+    material: GRAVEL
+    amount: 1
+    slot: 17
+    display_name: '&8&l■ &bMinecraft:gravel &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:gravel&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:gravel'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:gravel'
+    - '[close]'
+  DIORITE_block:
+    material: DIORITE
+    amount: 1
+    slot: 18
+    display_name: '&8&l■ &bMinecraft:diorite &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:diorite&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:diorite'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:diorite'
+    - '[close]'
+  ANDESITE_block:
+    material: ANDESITE
+    amount: 1
+    slot: 19
+    display_name: '&8&l■ &bMinecraft:andesite &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:andesite&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:andesite'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:andesite'
+    - '[close]'
+  GRANITE_block:
+    material: GRANITE
+    amount: 1
+    slot: 20
+    display_name: '&8&l■ &bMinecraft:granite &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:granite&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:granite'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:granite'
+    - '[close]'
+  SAND_block:
+    material: SAND
+    amount: 1
+    slot: 21
+    display_name: '&8&l■ &bMinecraft:sand &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:sand&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:sand'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:sand'
+    - '[close]'
+  RED_SAND_block:
+    material: RED_SAND
+    amount: 1
+    slot: 22
+    display_name: '&8&l■ &bMinecraft:red sand &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:red sand&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:red_sand'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:red_sand'
+    - '[close]'
+  CLAY_block:
+    material: CLAY
+    amount: 1
+    slot: 23
+    display_name: '&8&l■ &bMinecraft:clay &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:clay&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:clay'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:clay'
+    - '[close]'
+  LAVA_BUCKET_block:
+    material: LAVA_BUCKET
+    amount: 1
+    slot: 24
+    display_name: '&8&l■ &bMinecraft:lava &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:lava&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:lava'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:lava'
+    - '[close]'
+  WATER_BUCKET_block:
+    material: WATER_BUCKET
+    amount: 1
+    slot: 25
+    display_name: '&8&l■ &bMinecraft:water &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:water&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:water'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:water'
+    - '[close]'
+  GLASS_block:
+    material: GLASS
+    amount: 1
+    slot: 26
+    display_name: '&8&l■ &bMinecraft:glass &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:glass&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:glass'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:glass'
+    - '[close]'
+  BEDROCK_block:
+    material: BEDROCK
+    amount: 1
+    slot: 27
+    display_name: '&8&l■ &bMinecraft:bedrock &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:bedrock&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:bedrock'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:bedrock'
+    - '[close]'
+  END_STONE_block:
+    material: END_STONE
+    amount: 1
+    slot: 28
+    display_name: '&8&l■ &bMinecraft:end stone &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:end stone&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:end_stone'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:end_stone'
+    - '[close]'
+  GLOWSTONE_block:
+    material: GLOWSTONE
+    amount: 1
+    slot: 29
+    display_name: '&8&l■ &bMinecraft:glowstone &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:glowstone&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:glowstone'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:glowstone'
+    - '[close]'
+  OBSIDIAN_block:
+    material: OBSIDIAN
+    amount: 1
+    slot: 30
+    display_name: '&8&l■ &bMinecraft:obsidian &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:obsidian&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:obsidian'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:obsidian'
+    - '[close]'
+  NETHERRACK_block:
+    material: NETHERRACK
+    amount: 1
+    slot: 31
+    display_name: '&8&l■ &bMinecraft:netherrack &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:netherrack&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:netherrack'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:netherrack'
+    - '[close]'
+  WARPED_NYLIUM_block:
+    material: WARPED_NYLIUM
+    amount: 1
+    slot: 32
+    display_name: '&8&l■ &bMinecraft:warped nylium &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:warped nylium&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:warped_nylium'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:warped_nylium'
+    - '[close]'
+  CRIMSON_NYLIUM_block:
+    material: CRIMSON_NYLIUM
+    amount: 1
+    slot: 33
+    display_name: '&8&l■ &bMinecraft:crimson nylium &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:crimson nylium&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:crimson_nylium'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:crimson_nylium'
+    - '[close]'
+  SOUL_SAND_block:
+    material: SOUL_SAND
+    amount: 1
+    slot: 34
+    display_name: '&8&l■ &bMinecraft:soul sand &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:soul sand&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:soul_sand'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:soul_sand'
+    - '[close]'
+  BASALT_block:
+    material: BASALT
+    amount: 1
+    slot: 35
+    display_name: '&8&l■ &bMinecraft:basalt &8&l■'
+    lore:  
+    - '&c➥ &7Click to change &loutline to &e&lMinecraft:basalt&7.'
+    - '&c➥ &c&lWill clear all blocks at outline level.'
+    left_click_commands:
+    - '[player] plot set outline Minecraft:basalt'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot set outline Minecraft:basalt'
+    - '[close]'

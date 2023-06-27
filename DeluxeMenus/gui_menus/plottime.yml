@@ -1,0 +1,186 @@
+#plotsquared GUI
+
+menu_title: '&8&l■ &c&lPlot Time & Weather &8&l■'
+open_command: plottime
+
+size: 36
+items:
+  back:
+    material: OAK_DOOR
+    data: 0
+    slot: 27
+    display_name: '&6&l< &e&lBack'
+    lore:
+    - '&c➥ &7Click to return to settings menu.'
+    left_click_commands:
+    - '[openguimenu] plotsettings'
+    right_click_commands:
+    - '[openguimenu] plotsettings'
+  glass:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 0
+    slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 17
+    - 18
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    display_name: '&r'
+  plothead:
+    material: head-%plotsquared_currentplot_owner%
+    data: 0
+    slot: 4
+    display_name: '&6%plotsquared_currentplot_owner% plot'
+    lore:
+    - '&cCreated &7%plotsquared_currentplot_creationdate%.'
+    - '&cID &7%plotsquared_currentplot_xy%'
+    - '&cBiome: &7%plotsquared_currentplot_biome%'
+  '2':
+    material: SUNFLOWER
+    data: 0
+    amount: 1
+    slot: 10
+    display_name: '&8&l■ &bMorning &8&l■'
+    lore:
+    - '&c➥ &7Click to set the time to 0.'
+    left_click_commands:
+    - '[player] plot flag set time 0'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set time 0'
+    - '[close]'
+  '3':
+    material: SUNFLOWER
+    data: 0
+    amount: 2
+    slot: 11
+    display_name: '&8&l■ &bDay &8&l■'
+    lore:
+    - '&c➥ &7Click to set the time to 1000 (day).'
+    left_click_commands:
+    - '[player] plot flag set time 1000'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set time 1000'
+    - '[close]'
+  '4':
+    material: SUNFLOWER
+    data: 0
+    amount: 3
+    slot: 12
+    display_name: '&8&l■ &bNoon &8&l■'
+    lore:
+    - '&c➥ &7Click to set the time to 6000 (noon).'
+    left_click_commands:
+    - '[player] plot flag set time 6000'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set time 6000'
+    - '[close]'
+  '5':
+    material: SUNFLOWER
+    data: 0
+    amount: 4
+    slot: 13
+    display_name: '&8&l■ &bsunset‌ &8&l■'
+    lore:
+    - '&c➥ &7Click to set the time to 12000 (sunset‌).'
+    left_click_commands:
+    - '[player] plot flag set time 12000'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set time 12000'
+    - '[close]'
+  '6':
+    material: NETHER_STAR
+    data: 0
+    amount: 1
+    slot: 14
+    display_name: '&8&l■ &bnight &8&l■'
+    lore:
+    - '&c➥ &7Click to set the time to 13000 (night).'
+    left_click_commands:
+    - '[player] plot flag set time 13000'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set time 13000'
+    - '[close]'
+  '7':
+    material: NETHER_STAR
+    data: 0
+    amount: 2
+    slot: 15
+    display_name: '&8&l■ &bmidnight &8&l■'
+    lore:
+    - '&c➥ &7Click to set the time to 18000 (midnight).'
+    left_click_commands:
+    - '[player] plot flag set time 18000'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set time 18000'
+    - '[close]'
+  '8':
+    material: NETHER_STAR
+    data: 0
+    amount: 3
+    slot: 16
+    display_name: '&8&l■ &bSunrise &8&l■'
+    lore:
+    - '&c➥ &7Click to set the time to 23000 (sunrise).'
+    left_click_commands:
+    - '[player] plot flag set time 23000'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set time 23000'
+    - '[close]'
+
+  '9':
+    material: GLASS
+    amount: 1
+    slot: 21
+    display_name: '&8&l■ &bClear Weather &8&l■'
+    lore:
+    - '&c➥ &7Click to set the weather to clear.'
+    left_click_commands:
+    - '[player] plot flag set weather clear'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set weather clear'
+    - '[close]'
+  '10':
+    material: WATER_BUCKET
+    amount: 2
+    slot: 23
+    display_name: '&8&l■ &bRain &8&l■'
+    lore:
+    - '&c➥ &7Click to set the weather to rain.'
+    left_click_commands:
+    - '[player] plot flag set weather rain'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot flag set weather rain'
+    - '[close]'
+
+
+
+
+
+
+  

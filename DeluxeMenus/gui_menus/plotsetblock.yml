@@ -1,0 +1,109 @@
+#set biome of a plot
+
+menu_title: '&c&l⚠⚠ &8&lSet block menu &c&l⚠⚠'
+open_command: plotsetblock
+size: 36
+
+items:
+  back:
+    material: OAK_DOOR
+    data: 0
+    slot: 27
+    priority: 0
+    display_name: '&6&l< &e&lBack'
+    lore:
+    - '&c➥ &7Click to return to settings menu.'
+    left_click_commands:
+    - '[openguimenu] plotsettings'
+    right_click_commands:
+    - '[openguimenu] plotsettings'
+  glass:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 0
+    slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 17
+    - 18
+    - 26
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    display_name: '&r'
+  plothead:
+    material: head-%plotsquared_currentplot_owner%
+    data: 0
+    slot: 4
+    display_name: '&6%plotsquared_currentplot_owner% plot'
+    lore:
+    - '&cCreated: &7%plotsquared_currentplot_creationdate%.'
+    - '&cID: &7%plotsquared_currentplot_xy%'
+    - '&cBiome: &7%plotsquared_currentplot_biome%'
+  '2':
+    material: GRASS_BLOCK
+    data: 0
+    amount: 1
+    slot: 10
+    display_name: '&8&l⚠ &bSet floor block &8&l⚠'
+    lore:
+    - '&c➥ &7Click to set the floor block (y 62).'
+    - '&c➥ &c&lWill clear all blocks at Y level 62.'
+    left_click_commands:
+    - '[openguimenu] plotfloor'
+    right_click_commands:
+    - '[openguimenu] plotfloor'
+  '3':
+    material: DIAMOND_BLOCK
+    data: 0
+    amount: 1
+    slot: 12
+    display_name: '&8&l⚠ &bSet middle block &8&l⚠'
+    lore:
+    - '&c➥ &7Click to set the middle block of the plot.'
+    - '&c➥ &c&lWill clear the middle block.'
+    left_click_commands:
+    - '[openguimenu] plotmiddle'
+    right_click_commands:
+    - '[openguimenu] plotmiddle'
+  '4':
+    material: STONE
+    data: 0
+    amount: 1
+    slot: 14
+    display_name: '&8&l⚠ &bSet main block &8&l⚠'
+    lore:
+    - '&c➥ &7Click to set the block under the floor.'
+    - '&c➥ &c&lWill clear all blocks under Y level 62.'
+    left_click_commands:
+    - '[openguimenu] plotmain'
+    right_click_commands:
+    - '[openguimenu] plotmain'
+  '5':
+    material: TINTED_GLASS
+    data: 0
+    amount: 1
+    slot: 16
+    display_name: '&8&l⚠ &bSet outline block &8&l⚠'
+    lore:
+    - '&c➥ &7Click to set the block around the plot.'
+    - '&c➥ &c&lWill clear all blocks next to the border.'
+    - '&c➥ &c&lWill not go under the floor.'
+    left_click_commands:
+    - '[openguimenu] plotoutline'
+    right_click_commands:
+    - '[openguimenu] plotoutline'
+
+

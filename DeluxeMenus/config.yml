@@ -1,0 +1,29 @@
+# DeluxeMenus 1.13.7-Release main configuration file
+#
+# A full wiki on how to use this plugin can be found at:
+# https://wiki.helpch.at/clips-plugins/deluxemenus
+
+debug: HIGHEST
+check_updates: true
+gui_menus:
+  plotmanager:
+    file: plotmanager.yml
+  plotbiome:
+    file: plotbiome.yml
+  plotsettings:
+    file: plotsettings.yml
+  plotflag:
+    file: plotflags.yml
+  plottime:
+    file: plottime.yml
+  plotsetblock:
+    file: plotsetblock.yml
+  plotfloor:
+    file: plotfloor.yml
+  plotmain:
+    file: plotmain.yml
+  plotmiddle:
+    file: plotmiddle.yml
+  plotoutline:
+    file: plotoutline.yml
+  

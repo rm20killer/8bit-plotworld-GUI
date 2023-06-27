@@ -1,0 +1,731 @@
+#set biome of a plot
+
+menu_title: '&8&l■ &9&lPlot Biome &8&l■'
+open_command: plotbiome
+size: 45
+
+items:
+  back:
+    material: OAK_DOOR
+    data: 0
+    slot: 36
+    display_name: '&6&l< &e&lBack'
+    lore:
+    - '&c➥ &7Click to return to settings menu.'
+    left_click_commands:
+    - '[openguimenu] plotsettings'
+    right_click_commands:
+    - '[openguimenu] plotsettings'
+  glass:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 0
+    slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+    display_name: '&r'
+  plothead:
+    material: head-%plotsquared_currentplot_owner%
+    data: 0
+    slot: 4
+    display_name: '&6%plotsquared_currentplot_owner% plot'
+    lore:
+    - '&cCreated: &7%plotsquared_currentplot_creationdate%.'
+    - '&cID: &7%plotsquared_currentplot_xy%'
+    - '&cBiome: &7%plotsquared_currentplot_biome%'
+  plains_Switch:
+    material: GRASS_BLOCK
+    priority: 1
+    amount: 1
+    slot: 9
+    display_name: '&8&l■ &bPlains &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lPlains&7.'
+    left_click_commands:
+    - '[player] plot setbiome plains'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome plains'
+    - '[close]'
+  plains_enchanted:
+    material: GRASS_BLOCK
+    priority: 0
+    amount: 1
+    slot: 9
+    display_name: '&8&l■ &bPlains &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lPlains&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_plains: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:plains"
+  forest_Switch:
+    material: OAK_LOG
+    priority: 1
+    amount: 1
+    slot: 10
+    display_name: '&8&l■ &bForest &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lForest&7.'
+    left_click_commands:
+    - '[player] plot setbiome forest'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome forest'
+    - '[close]'
+  forest_enchanted:
+    material: OAK_LOG
+    priority: 0
+    amount: 1
+    slot: 10
+    display_name: '&8&l■ &bForest &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lForest&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_forest: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:forest"
+  Birch_Forest_Switch:
+    material: BIRCH_LOG
+    priority: 1
+    amount: 1
+    slot: 11
+    display_name: '&8&l■ &bBirch Forest &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lBirch Forest&7.'
+    left_click_commands:
+    - '[player] plot setbiome Birch_Forest'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome Birch_Forest'
+    - '[close]'
+  Birch_Forest_enchanted:
+    material: BIRCH_LOG
+    priority: 0
+    amount: 1
+    slot: 11
+    display_name: '&8&l■ &bBirch Forest &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lBirch Forest&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_Birch_Forest: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:Birch_Forest"
+  Dark_Forest_Switch:
+    material: DARK_OAK_LOG
+    priority: 1
+    amount: 1
+    slot: 12
+    display_name: '&8&l■ &bDark Forest &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lDark Forest&7.'
+    left_click_commands:
+    - '[player] plot setbiome Dark_Forest'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome Dark_Forest'
+    - '[close]'
+  Dark_Forest_enchanted:
+    material: DARK_OAK_LOG
+    priority: 0
+    amount: 1
+    slot: 12
+    display_name: '&8&l■ &bDark Forest &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lDark Forest&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_Dark_Forest: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:Dark_Forest"
+  Taiga_Switch:
+    material: SPRUCE_LOG
+    priority: 1
+    amount: 1
+    slot: 13
+    display_name: '&8&l■ &bTaiga &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lTaiga&7.'
+    left_click_commands:
+    - '[player] plot setbiome Taiga'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome Taiga'
+    - '[close]'
+  Taiga_enchanted:
+    material: SPRUCE_LOG
+    priority: 0
+    amount: 1
+    slot: 13
+    display_name: '&8&l■ &bTaiga &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lTaiga&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_Taiga: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:Taiga"
+  swamp_Switch:
+    material: MANGROVE_LOG
+    priority: 1
+    amount: 1
+    slot: 14
+    display_name: '&8&l■ &bSwamp &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lSwamp&7.'
+    left_click_commands:
+    - '[player] plot setbiome swamp'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome swamp'
+    - '[close]'
+  swamp_enchanted:
+    material: MANGROVE_LOG
+    priority: 0
+    amount: 1
+    slot: 14
+    display_name: '&8&l■ &bSwamp &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lSwamp&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_swamp: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:swamp"
+  jungle_Switch:
+    material: JUNGLE_LOG
+    priority: 1
+    amount: 1
+    slot: 15
+    display_name: '&8&l■ &bJungle &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lJungle&7.'
+    left_click_commands:
+    - '[player] plot setbiome jungle'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome jungle'
+    - '[close]'
+  jungle_enchanted:
+    material: JUNGLE_LOG
+    priority: 0
+    amount: 1
+    slot: 15
+    display_name: '&8&l■ &bJungle &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lJungle&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_jungle: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:jungle"
+  desert_Switch:
+    material: CACTUS
+    priority: 1
+    amount: 1
+    slot: 16
+    display_name: '&8&l■ &bDesert &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lDesert&7.'
+    left_click_commands:
+    - '[player] plot setbiome desert'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome desert'
+    - '[close]'
+  desert_enchanted:
+    material: CACTUS
+    priority: 0
+    amount: 1
+    slot: 16
+    display_name: '&8&l■ &bDesert &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lDesert&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_desert: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:desert"
+  savanna_Switch:
+    material: ACACIA_LOG
+    priority: 1
+    amount: 1
+    slot: 17
+    display_name: '&8&l■ &bSavanna &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lSavanna&7.'
+    left_click_commands:
+    - '[player] plot setbiome savanna'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome savanna'
+    - '[close]'
+  savanna_enchanted:
+    material: ACACIA_LOG
+    priority: 0
+    amount: 1
+    slot: 17
+    display_name: '&8&l■ &bSavanna &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lSavanna&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_savanna: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:savanna"
+  ocean_Switch:
+    material: SEA_LANTERN
+    priority: 1
+    amount: 1
+    slot: 18
+    display_name: '&8&l■ &bOcean &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lOcean&7.'
+    left_click_commands:
+    - '[player] plot setbiome ocean'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome ocean'
+    - '[close]'
+  ocean_enchanted:
+    material: SEA_LANTERN
+    priority: 0
+    amount: 1
+    slot: 18
+    display_name: '&8&l■ &bOcean &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lOcean&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_ocean: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:ocean"
+  snowy_plains_Switch:
+    material: SNOW_BLOCK
+    priority: 1
+    amount: 1
+    slot: 19
+    display_name: '&8&l■ &bSnowy Plains &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lSnowy Plains&7.'
+    left_click_commands:
+    - '[player] plot setbiome snowy_plains'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome snowy_plains'
+    - '[close]'
+  snowy_plains_enchanted:
+    material: SNOW_BLOCK
+    priority: 0
+    amount: 1
+    slot: 19
+    display_name: '&8&l■ &bSnowy Plains &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lSnowy Plains&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_snowy_plains: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:snowy_plains"
+  stony_shore_Switch:
+    material: STONE
+    priority: 1
+    amount: 1
+    slot: 20
+    display_name: '&8&l■ &bStony Shore &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lStony Shore&7.'
+    left_click_commands:
+    - '[player] plot setbiome stony_shore'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome stony_shore'
+    - '[close]'
+  stony_shore_enchanted:
+    material: STONE
+    priority: 0
+    amount: 1
+    slot: 20
+    display_name: '&8&l■ &bStony Shore &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lStony Shore&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_stony_shore: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:stony_shore"
+  mushroom_fields_Switch:
+    material: RED_MUSHROOM_BLOCK
+    priority: 1
+    amount: 1
+    slot: 21
+    display_name: '&8&l■ &bMushroom Fields &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lMushroom Fields&7.'
+    left_click_commands:
+    - '[player] plot setbiome mushroom_fields'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome mushroom_fields'
+    - '[close]'
+  mushroom_fields_enchanted:
+    material: RED_MUSHROOM_BLOCK
+    priority: 0
+    amount: 1
+    slot: 21
+    display_name: '&8&l■ &bMushroom Fields &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lMushroom Fields&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_mushroom_fields: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:mushroom_fields"
+  badlands_Switch:
+    material: TERRACOTTA
+    priority: 1
+    amount: 1
+    slot: 22
+    display_name: '&8&l■ &bBadlands &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lBadlands&7.'
+    left_click_commands:
+    - '[player] plot setbiome badlands'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome badlands'
+    - '[close]'
+  badlands_enchanted:
+    material: TERRACOTTA
+    priority: 0
+    amount: 1
+    slot: 22
+    display_name: '&8&l■ &bBadlands &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lBadlands&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_badlands: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:badlands"
+  stony_peaks_Switch:
+    material: ANDESITE
+    priority: 1
+    amount: 1
+    slot: 23
+    display_name: '&8&l■ &bStony Peaks &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lStony Peaks&7.'
+    left_click_commands:
+    - '[player] plot setbiome stony_peaks'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome stony_peaks'
+    - '[close]'
+  stony_peaks_enchanted:
+    material: ANDESITE
+    priority: 0
+    amount: 1
+    slot: 23
+    display_name: '&8&l■ &bStony Peaks &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lStony Peaks&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_stony_peaks: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:stony_peaks"
+  the_void_Switch:
+    material: BEDROCK
+    priority: 1
+    amount: 1
+    slot: 24
+    display_name: '&8&l■ &bThe Void &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lThe Void&7.'
+    left_click_commands:
+    - '[player] plot setbiome the_void'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome the_void'
+    - '[close]'
+  the_void_enchanted:
+    material: BEDROCK
+    priority: 0
+    amount: 1
+    slot: 24
+    display_name: '&8&l■ &bThe Void &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lThe Void&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_the_void: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:the_void"
+  the_end_Switch:
+    material: END_STONE
+    priority: 1
+    amount: 1
+    slot: 25
+    display_name: '&8&l■ &bThe End &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lThe End&7.'
+    left_click_commands:
+    - '[player] plot setbiome the_end'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome the_end'
+    - '[close]'
+  the_end_enchanted:
+    material: END_STONE
+    priority: 0
+    amount: 1
+    slot: 25
+    display_name: '&8&l■ &bThe End &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lThe End&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_the_end: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:the_end"
+  nether_wastes_Switch:
+    material: NETHERRACK
+    priority: 1
+    amount: 1
+    slot: 26
+    display_name: '&8&l■ &bNether Wastes &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lNether Wastes&7.'
+    left_click_commands:
+    - '[player] plot setbiome nether_wastes'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome nether_wastes'
+    - '[close]'
+  nether_wastes_enchanted:
+    material: NETHERRACK
+    priority: 0
+    amount: 1
+    slot: 26
+    display_name: '&8&l■ &bNether Wastes &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lNether Wastes&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_nether_wastes: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:nether_wastes"
+  crimson_forest_Switch:
+    material: CRIMSON_STEM
+    priority: 1
+    amount: 1
+    slot: 27
+    display_name: '&8&l■ &bCrimson Forest &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lCrimson Forest&7.'
+    left_click_commands:
+    - '[player] plot setbiome crimson_forest'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome crimson_forest'
+    - '[close]'
+  crimson_forest_enchanted:
+    material: CRIMSON_STEM
+    priority: 0
+    amount: 1
+    slot: 27
+    display_name: '&8&l■ &bCrimson Forest &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lCrimson Forest&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_crimson_forest: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:crimson_forest"
+  warped_forest_Switch:
+    material: WARPED_STEM
+    priority: 1
+    amount: 1
+    slot: 28
+    display_name: '&8&l■ &bWarped Forest &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lWarped Forest&7.'
+    left_click_commands:
+    - '[player] plot setbiome warped_forest'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome warped_forest'
+    - '[close]'
+  warped_forest_enchanted:
+    material: WARPED_STEM
+    priority: 0
+    amount: 1
+    slot: 28
+    display_name: '&8&l■ &bWarped Forest &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lWarped Forest&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_warped_forest: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:warped_forest"
+  basalt_deltas_Switch:
+    material: BASALT
+    priority: 1
+    amount: 1
+    slot: 29
+    display_name: '&8&l■ &bBasalt Deltas &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lBasalt Deltas&7.'
+    left_click_commands:
+    - '[player] plot setbiome basalt_deltas'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome basalt_deltas'
+    - '[close]'
+  basalt_deltas_enchanted:
+    material: BASALT
+    priority: 0
+    amount: 1
+    slot: 29
+    display_name: '&8&l■ &bBasalt Deltas &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lBasalt Deltas&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_basalt_deltas: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:basalt_deltas"
+  soul_sand_valley_Switch:
+    material: SOUL_SAND
+    priority: 1
+    amount: 1
+    slot: 30
+    display_name: '&8&l■ &bSoul Sand Valley &8&l■'
+    lore:  
+    - '&c➥ &7Click to set biome to &e&lSoul Sand Valley&7.'
+    left_click_commands:
+    - '[player] plot setbiome soul_sand_valley'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot setbiome soul_sand_valley'
+    - '[close]'
+  soul_sand_valley_enchanted:
+    material: SOUL_SAND
+    priority: 0
+    amount: 1
+    slot: 30
+    display_name: '&8&l■ &bSoul Sand Valley &8&l■'
+    lore:
+    - '&c➥ &7Current biome is &e&lSoul Sand Valley&7.'
+    hide_enchantments: true
+    enchantments:
+    - 'SILK_TOUCH;1'
+    view_requirement:
+      requirements:
+          is_soul_sand_valley: 
+            type: string equals
+            input: "%plotsquared_currentplot_biome%"
+            output: "minecraft:soul_sand_valley"

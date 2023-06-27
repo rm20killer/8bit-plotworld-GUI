@@ -1,0 +1,141 @@
+menu_title: '&8&l■ &c&lPlot Settings &8&l■'
+open_command: plotsettingsgui
+size: 36
+
+
+items:
+  glass:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 0
+    slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 17
+    - 18
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    display_name: '&r'
+  back:
+    material: OAK_DOOR
+    data: 0
+    slot: 27
+    display_name: '&6&l< &e&lBack'
+    lore:
+    - '&c➥ &7Click to return to main menu.'
+    left_click_commands:
+    - '[openguimenu] plotmanager'
+    right_click_commands:
+    - '[openguimenu] plotmanager'
+  plothead:
+    material: head-%plotsquared_currentplot_owner%
+    data: 0
+    slot: 4
+    display_name: '&6%plotsquared_currentplot_owner% plot'
+    lore:
+    - '&cCreated &7%plotsquared_currentplot_creationdate%.'
+    - '&cID &7%plotsquared_currentplot_xy%'
+    - '&cBiome: &7%plotsquared_currentplot_biome%'
+  '2':
+    material: hdb-32826
+    data: 0
+    amount: 1
+    slot: 10
+    display_name: '&8&l■ &bDownload Plot &8&l■'
+    lore:
+    - '&c➥ &7Click to download plot as a schematic.'
+    left_click_commands:
+    - '[player] plot download'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot download'
+    - '[close]'
+  '3':
+    material: Grass_block
+    data: 0
+    amount: 1
+    slot: 12
+    display_name: '&8&l■ &bChange Biome &8&l■'
+    lore:
+    - '&c➥ &7Click here to change the plot biome.'
+    left_click_commands:
+    - '[openguimenu] plotbiome'
+    right_click_commands:
+    - '[openguimenu] plotbiome'
+  '4':
+    material: SUNFLOWER
+    data: 0
+    amount: 1
+    slot: 14
+    display_name: '&8&l■ &bPlot Time & Weather &8&l■'
+    lore:
+    - '&c➥ &7Click here to change the plot time and weather.'
+    left_click_commands:
+    - '[openguimenu] plottime'
+    right_click_commands:
+    - '[openguimenu] plottime'
+  '5':
+    material: WOODEN_AXE
+    data: 0
+    amount: 1
+    slot: 20
+    display_name: '&8&l■ &bSet blocks &8&l■'
+    lore:
+    - '&c➥ &7Click here to set blocks for floor, outline, middle and underground.'
+    - '&c➥ &CThose will clear any blocks in the way'
+    - '&c⚠ &C&lBE CAREFUL WITH THIS MENU!'
+    left_click_commands:
+    - '[openguimenu] plotsetblock'
+    right_click_commands:
+    - '[openguimenu] plotsetblock'
+  '6':
+    material: CHAIN_COMMAND_BLOCK
+    data: 0
+    amount: 1
+    slot: 24
+    display_name: '&8&l■ &bSet plot Flags &8&l■'
+    lore:
+    - '&c➥ &7Click here to set plot flags.'
+    - '&c➥ Work In Progress.'
+    left_click_commands:
+    - '[openguimenu] plotflag'
+    right_click_commands:
+    - '[openguimenu] plotflag'
+  '7':
+    material: IRON_CHESTPLATE
+    data: 0
+    amount: 1
+    slot: 16
+    display_name: '&8&l■ &bAdd trusted member &8&l■'
+    lore:
+    - '&c➥ &7left click here to add a trusted an online member.'
+    - '&c➥ &7right click here to add a trusted an offline member.'
+    left_click_commands:
+    - '[player] plot trust <✦-p Who do you want to trust? ✦>'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot trust <✦-a Who do you want to trust? ✦>'
+    - '[close]'
+
+
+
+
+
+    
+
+register_command: false

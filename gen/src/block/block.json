@@ -1,0 +1,31 @@
+{
+    "block":[
+            "minecraft:air",
+            "minecraft:grass_block",
+            "minecraft:dirt",
+            "minecraft:podzol",
+            "minecraft:mycelium",
+            "minecraft:coarse_dirt",
+            "minecraft:stone",
+            "minecraft:cobblestone",
+            "minecraft:gravel",
+            "minecraft:diorite",
+            "minecraft:andesite",
+            "minecraft:granite",
+            "minecraft:sand",
+            "minecraft:red_sand",
+            "minecraft:clay",
+            "minecraft:lava",
+            "minecraft:water",
+            "minecraft:glass",
+            "minecraft:bedrock",
+            "minecraft:end_stone",
+            "minecraft:glowstone",
+            "minecraft:obsidian",
+            "minecraft:netherrack",
+            "minecraft:warped_nylium",
+            "minecraft:crimson_nylium",
+            "minecraft:soul_sand",
+            "minecraft:basalt"
+    ]
+}

@@ -1,0 +1,124 @@
+#plotsquared GUI
+
+menu_title: '&8&l■ &c&lPlot Manager &8&l■'
+open_command: 
+ - plotmanager
+ - plotm
+
+size: 36
+items:
+  glass:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 0
+    slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 17
+    - 18
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    display_name: '&r'
+  plothead:
+    material: head-%plotsquared_currentplot_owner%
+    data: 0
+    slot: 4
+    display_name: '&6%plotsquared_currentplot_owner% plot'
+    lore:
+    - '&cCreated &7%plotsquared_currentplot_creationdate%.'
+    - '&cID &7%plotsquared_currentplot_xy%'
+    - '&cBiome: &7%plotsquared_currentplot_biome%'
+  '2':
+    material: RED_BED
+    data: 0
+    amount: 1
+    slot: 11
+    display_name: '&8&l■ &bTeleport &8&l■'
+    lore:
+    - '&c➥ &7Click to teleport to your home plot.'
+    - '&c➥ &7Right click to enter home number.'
+    left_click_commands:
+    - '[player] plot home'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot home <✦-s Which home✦>'
+    - '[close]'
+  '3':
+    material: GRASS
+    data: 0
+    amount: 1
+    slot: 12
+    display_name: '&8&l■ &eCreate Plot &8&l■'
+    lore:
+    - '&c➥ &7Create a brand new plot.'
+    - '&c➥ &7 %plotsquared_plot_count% / %plotsquared_allowed_plot_count%'
+    left_click_commands:
+    - '[player] plot auto'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot auto'
+    - '[close]'
+  '4':
+    material: ENDER_EYE
+    data: 0
+    amount: 1
+    slot: 14
+    display_name: '&8&l■ &6Claim Plot &8&l■'
+    lore:
+    - '&c➥ &7Click to claim the plot you are standing on.'
+    - '&c➥ &7 %plotsquared_plot_count% / %plotsquared_allowed_plot_count%'
+    left_click_commands:
+    - '[player] plot claim'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot claim'
+    - '[close]'
+  '5':
+    material: WRITABLE_BOOK
+    data: 0
+    amount: 1
+    slot: 15
+    display_name: '&8&l■ &3Plot Info &8&l■'
+    lore:
+    - '&c➥ &7Click to get this plot''s information.'
+    left_click_commands:
+    - '[player] plot info'
+    - '[close]'
+    right_click_commands:
+    - '[player] plot info'
+    - '[close]'
+  '6':
+    material: command_block
+    data: 0
+    amount: 1
+    slot: 22
+    display_name: '&8&l■ &aPlot settings &8&l■'
+    lore:
+    - '&c➥ &7Click here to access plot settings.'
+    left_click_commands:
+    - '[openguimenu] plotsettings'
+    right_click_commands:
+    - '[openguimenu] plotsettings'
+    view_requirement:
+      requirements:
+        plot_owner: 
+          type: string equals
+          input: "%plotsquared_currentplot_owner%"
+          output: "%player_name%"
+
+register_command: true
