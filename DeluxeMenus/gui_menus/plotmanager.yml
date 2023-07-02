@@ -118,7 +118,7 @@ items:
       requirements:
         plot_owner: 
           type: string equals
-          input: "%plotsquared_currentplot_owner%"
-          output: "%player_name%"
+          input: "%plotsquared_currentplot_can_build%"
+          output: "true"
 
 register_command: true
