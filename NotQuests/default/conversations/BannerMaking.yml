@@ -1,0 +1,44 @@
+start: Angel.greeting1
+Lines:
+  Angel:
+    color: <Gold>
+    greeting1:
+      text: <white>Hello %essentials_nickname%!
+      next: Player.greeting1, Player.greeting2
+    banner:
+      text: <white>I making a banner with</white> <aqua><underlined><click:SUGGEST_COMMAND:/banner>/banner</underlined></aqua>.
+        <white>Want to help me?
+      next: Player.questYes, Player.questNo
+    banner2:
+      text: You can make a banner using <aqua><underlined><click:SUGGEST_COMMAND:/banner>/banner</underlined></aqua>.
+    bye:
+      text: <white>That fine, see you around. When you ready feel free to do to come
+        back to me the quest.
+    questStart:
+      text: <white>OMG really!! Can you make me a</white> <Blue>blue banner</blue>
+        <white>with a</white> <red>red flower</red>?
+      actions:
+      - GiveQuest BannerMaking --forceGive
+  Player:
+    greeting1:
+      text: <white>Hi, what are you doing?
+      next: Angel.banner
+      conditions:
+      - '!CompletedQuests contains BannerMaking'
+    greeting2:
+      text: <white>Hey, Could you remind me how to make a banner?
+      next: Angel.banner2
+      conditions:
+      - CompletedQuests contains BannerMaking
+    questYes:
+      text: <white>Sure! what banner do you want me to make?
+      next: Angel.questStart
+    questNo:
+      text: <white>Sorry not right now
+      next: Angel.bye
+npcIDs:
+- 1
+npcs:
+  citizens-0:
+    type: citizens
+    integerID: 0

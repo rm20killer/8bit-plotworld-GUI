@@ -1,0 +1,76 @@
+start: Riley.greeting
+Lines:
+  Riley:
+    color: <GOLD>
+    greeting:
+      text: <white>Greetings %essentials_nickname%, how may I be of assistance to
+        you?
+      next: Player.greeting1, Player.greeting2
+    headQuest:
+      text: <white>Ah, these heads I acquired through the utilization of the <aqua><underlined><click:SUGGEST_COMMAND:/hdb>/hdb</underlined></aqua>.<white>
+        command, which provides an extensive array of decorative head options. <br>The
+        assortment is quite vast; would you care to assist me in locating a few specific
+        ones?
+      next: Player.StartQuestYes, Player.StartQuestNo
+    StartQuest:
+      text: <white>Could you lend me your assistance in locating the following heads?
+        <br>1) <red><bold>8 Bit Burger</red><br>2) <red><bold>Potted Bush with Red
+        Flowers</red>
+      actions:
+      - GiveQuest HeadDatabaseSearch --forceGive
+    byeQuest:
+      text: <white>Absolutely, take care. Whenever you're prepared, please don't hesitate
+        to return to me for the quest.
+    bye:
+      text: <white>Farewell and take care as well.
+    hdbHelp:
+      text: <white>To acquire a head, employ <aqua><underlined><click:SUGGEST_COMMAND:/hdb>/hdb</underlined></aqua>,
+        and for further convenience, you may conduct a search by utilizing <aqua><underlined><click:SUGGEST_COMMAND:/hdb
+        search>/hdb search [search term]</underlined></aqua>.
+      next: Player.howtophead, Player.bye
+    pheadhelp:
+      text: <white>To procure a head associated with a specific individual, employ
+        <aqua><underlined><click:SUGGEST_COMMAND:/phead>/phead [Minecraft name]</underlined></aqua>.
+      next: Player.howtohdb, Player.bye
+    headToGet:
+      text: <white>The Head to get me are <br>1) <red><bold>8 Bit Burger</red><br>2)
+        <red><bold>Potted Bush with Red Flowers</red><br> <br><br> <italic><gray><click:run_command:/q
+        progress HeadDatabaseSearch>Click Here to see progress</click>
+  
+  Player:
+    greeting1:
+      text: <white>Hello, How did you get those heads?
+      next: Riley.headQuest
+      conditions:
+      - '!CompletedQuests contains HeadDatabaseSearch'
+    greeting2:
+      text: <white>Hi, what heads do you need?
+      next: Riley.headToGet
+      conditions:
+      - ActiveQuests contains HeadDatabaseSearch
+    howtohdb:
+      text: <White>Can you remind me how to get custom heads?
+      next: Riley.hdbHelp
+      conditions:
+      - CompletedQuests contains HeadDatabaseSearch
+    howtophead:
+      text: <white>I can't remeber how to get a specific player head. Could you tell
+        me?
+      next: Riley.pheadhelp
+      conditions:
+      - CompletedQuests contains HeadDatabaseSearch
+    bye:
+      text: <white>Bye
+      next: Riley.Bye
+    StartQuestYes:
+      text: <White>Sure!! What heads do you need?
+      next: Riley.StartQuest
+    StartQuestNo:
+      text: <White>Sorry not right now
+      next: Riley.byeQuest
+npcIDs:
+- -1
+npcs:
+  citizens-8:
+    type: citizens
+    integerID: 8

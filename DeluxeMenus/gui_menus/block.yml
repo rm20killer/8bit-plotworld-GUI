@@ -1,0 +1,115 @@
+menu_title: '&8&l■ &9Blocks &8&l■'
+open_command: block
+size: 36
+
+items:
+  back:
+    material: OAK_DOOR
+    data: 0
+    slot: 27
+    display_name: '&6&l< &e&lBack'
+    lore:
+    - '&c➥ &7Click to return to settings menu.'
+    left_click_commands:
+    - '[openguimenu] plotmanager'
+    right_click_commands:
+    - '[openguimenu] plotmanager'
+  glass:
+    material: GRAY_STAINED_GLASS_PANE
+    data: 0
+    slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 17
+    - 18
+    - 26
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    display_name: '&r'
+  '2':
+    material: Light
+    data: 0
+    amount: 15
+    slot: 10
+    display_name: '&8&l■ &bLight block &8&l■'
+    lore:
+    - '&c➥ &7Left Click to get all light blocks.'
+    left_click_commands:
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"1"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"2"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"3"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"4"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"5"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"6"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"7"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"8"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"9"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"10"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"11"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"12"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"13"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"14"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light{BlockStateTag:{level:"15"}} 1'
+  '3':
+    material: barrier
+    data: 0
+    amount: 1
+    slot: 12
+    display_name: '&8&l■ &bBarrier &8&l■'
+    lore:
+    - '&c➥ &7Click to get a barrier block.'
+    left_click_commands:
+    - '[console] minecraft:give %player_name% minecraft:barrier 1'
+  '4':
+    material: structure_void
+    data: 0
+    amount: 1
+    slot: 14
+    display_name: '&8&l■ &bStructure Void &8&l■'
+    lore:
+    - '&c➥ &7Click to get a structure void block.'
+    left_click_commands:
+    - '[console] minecraft:give %player_name% minecraft:structure_void 1'
+  '5':
+    material: white_bed
+    data: 0
+    amount: 1
+    slot: 16
+    display_name: '&8&l■ &bBeds head &8&l■'
+    lore:
+    - '&c➥ &7Click to get a all coloured beds (head part)'
+    left_click_commands:
+    - '[console] minecraft:give %player_name% minecraft:white_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:black_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:red_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:green_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:brown_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:blue_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:purple_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:cyan_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light_gray_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:gray_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:pink_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:lime_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:yellow_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:light_blue_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:magenta_bed{BlockStateTag:{part:"head"}} 1'
+    - '[console] minecraft:give %player_name% minecraft:orange_bed{BlockStateTag:{part:"head"}} 1'
+
+
+
+register_command: true

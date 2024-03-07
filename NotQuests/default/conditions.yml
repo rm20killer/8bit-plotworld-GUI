@@ -1,0 +1,21 @@
+conditions:
+  BannernotCompleted:
+    conditionType: List
+    progressNeeded: 1
+    negated: true
+    description: ''
+    hiddenStatusExpression: '0'
+    specifics:
+      variableName: CompletedQuests
+      operator: contains
+      expression: BannerMaking
+  BannernotActive:
+    conditionType: List
+    progressNeeded: 1
+    negated: true
+    description: ''
+    hiddenStatusExpression: '0'
+    specifics:
+      variableName: ActiveQuests
+      operator: contains
+      expression: BannerMaking

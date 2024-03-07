@@ -120,5 +120,16 @@ items:
           type: string equals
           input: "%plotsquared_currentplot_can_build%"
           output: "true"
+  '7':
+    material: Light
+    data: 0
+    amount: 1
+    slot: 19
+    display_name: '&8&l■ &cBlocks &8&l■'
+    lore:
+    - '&c➥ &7access the block menu to get blocks like light_block.'
+    left_click_commands:
+    - '[openguimenu] block'
+
 
 register_command: true

@@ -87,6 +87,10 @@
         {
             "name":"soul_sand_valley",
             "item":"minecraft:soul_sand"
+        },
+        {
+            "name":"cherry_grove",
+            "item":"minecraft:cherry_leaves"
         }
     ]
 }

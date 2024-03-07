@@ -1,0 +1,44 @@
+start: Dusty.greeting
+Lines:
+  Dusty:
+    color: <GOLD>
+    greeting:
+      text: <white>Howdy, %essentials_nickname%, What can I do for ya?
+      next: Player.duos, Player.heads, Player.block, Player.other
+    help:
+      next: Player.duos, Player.heads, Player.block, Player.other
+    duo:
+      text: <white>Yes, but you will forfeit your ability to win a premium plot.
+      next: Dusty.help
+    heads:
+      text: <white>Yes, you have access to <aqua><underlined><click:SUGGEST_COMMAND:/hdb>/hdb</underlined></aqua>
+      next: Dusty.help
+    blocks:
+      text: <white>Yes, you can access them using <aqua><underlined><click:SUGGEST_COMMAND:/block>/block</underlined></aqua>
+      next: Dusty.help
+    other:
+      text: <white>Feel free to ask in discord or a mod for any other questions.
+      next: Dusty.help
+  
+  Player:
+    other:
+      text: <italic><gray>[Other Questions]
+      next: Dusty.other
+    duos:
+      text: <white>Can we do duos?
+      next: Dusty.duo
+    heads:
+      text: <white>Can I use player heads?
+      next: Dusty.heads
+    block:
+      text: <white>Can I use light blocks, barriers etc??
+      next: Dusty.blocks
+
+
+
+npcIDs:
+- -1
+npcs:
+  citizens-14:
+    type: citizens
+    integerID: 14

@@ -26,4 +26,6 @@ gui_menus:
     file: plotmiddle.yml
   plotoutline:
     file: plotoutline.yml
+  block:
+    file: block.yml
   

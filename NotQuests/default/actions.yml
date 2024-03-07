@@ -1,0 +1,14 @@
+actions:
+  BannerConvo:
+    actionType: StartConversation
+    displayName: BannerConvo
+    executionDelay: 1000
+    specifics:
+      conversation: BannerMaking
+      endPrevious: false
+  BannerStarQuest:
+    actionType: GiveQuest
+    displayName: BannerStarQuest
+    specifics:
+      quest: BannerMaking
+      forceGive: true
