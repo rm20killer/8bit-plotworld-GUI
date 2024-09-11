@@ -1,0 +1,303 @@
+quests:
+  TrickOrTreat_2023_Titan_HeadHunt:
+    limits:
+      accepts: -1
+      completions: 1
+      fails: -1
+    displayName: Trick-Or-Treat head hunt 2023
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2022
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    objectives:
+      '1':
+        objectiveType: Objective
+        progressNeededExpression: '1'
+        specifics:
+          objectiveHolderName: ''
+  TrickOrTreat_2023_Tabatha:
+    limits:
+      completions: 1
+      accepts: 1
+    displayName: '"Trick-or-Treat at Mushroom District"'
+    objectives:
+      '1':
+        objectiveType: Objective
+        progressNeededExpression: '1'
+        specifics:
+          objectiveHolderName: ''
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2022
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    rewards:
+      '1':
+        actionType: GiveItem
+        specifics:
+          itemStackSelection:
+            itemStacks:
+              '1':
+                ==: org.bukkit.inventory.ItemStack
+                v: 3465
+                type: PLAYER_HEAD
+                meta:
+                  ==: ItemMeta
+                  meta-type: SKULL
+                  display-name: '{"extra":[{"bold":true,"italic":false,"color":"dark_green","text":"Poisoned
+                    Apple"}],"text":""}'
+                  lore:
+                  - '{"extra":[{"italic":false,"color":"white","text":"An apple given
+                    by a evil Queen which sends the victim into deep sleep. Can only
+                    be waken up by love''s first kiss."}],"text":""}'
+                  - '{"text":""}'
+                  - '{"extra":[{"italic":false,"color":"gold","text":"Trick-Or-Treat
+                    2023"}],"text":""}'
+                  skull-owner:
+                    ==: PlayerProfile
+                    uniqueId: 04049c90-d3e9-4621-9caf-0000aaa65518
+                    properties:
+                    - name: textures
+                      value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzdlNzc3NDBlZjZiMzM0NzFiZjE2ZDI0YzliMGRlMzYzZjJmZGMxNzQ0NTc2NTUwYmRkYzVkOTQzM2M2YzExOSJ9fX0=
+            any: false
+          nqitemamount: 1
+  TrickOrTreat_2023_Blackbeard:
+    rewards:
+      '1':
+        actionType: GiveItem
+        specifics:
+          itemStackSelection:
+            itemStacks:
+              '1':
+                ==: org.bukkit.inventory.ItemStack
+                v: 3465
+                type: PLAYER_HEAD
+                meta:
+                  ==: ItemMeta
+                  meta-type: SKULL
+                  display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Skull
+                    Candle"}],"text":""}'
+                  lore:
+                  - '{"extra":[{"italic":false,"color":"white","text":"Aye, a skull
+                    with a lit candle be a symbol of eerie mystery "}],"text":""}'
+                  - '{"extra":[{"italic":false,"color":"white","text":"and a warnin''
+                    of treacherous waters."}],"text":""}'
+                  - '{"text":""}'
+                  - '{"extra":[{"bold":true,"italic":false,"color":"gold","text":"Trick-Or-Treat
+                    2023"}],"text":""}'
+                  skull-owner:
+                    ==: PlayerProfile
+                    uniqueId: 04049c90-d3e9-4621-9caf-0000aaa57604
+                    properties:
+                    - name: textures
+                      value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjc0NDYwMmRhNTk5YzVkZmFiZmI3YWE4MTcwZTc5ODk4MDg4ZTUyZDcyNmFlODdiMDUzYjY4YWRjOThmYWEzMiJ9fX0=
+            any: false
+          nqitemamount: 1
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2022
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    objectives:
+      '1':
+        objectiveType: Objective
+        progressNeededExpression: '1'
+        specifics:
+          objectiveHolderName: ''
+    displayName: '"Trick-or-Treat at Harbor District"'
+    limits:
+      completions: 1
+  TrickOrTreat_2023_Damien:
+    objectives:
+      '1':
+        objectiveType: Objective
+        progressNeededExpression: '1'
+        specifics:
+          objectiveHolderName: ''
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2022
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    limits:
+      completions: 1
+    displayName: '"Trick-or-Treat at Museum District"'
+    rewards:
+      '1':
+        actionType: GiveItem
+        specifics:
+          itemStackSelection:
+            itemStacks:
+              '1':
+                ==: org.bukkit.inventory.ItemStack
+                v: 3465
+                type: FILLED_MAP
+                meta:
+                  ==: ItemMeta
+                  meta-type: MAP
+                  display-name: '{"extra":[{"bold":true,"italic":false,"color":"red","text":"Pumpkin
+                    Head"}],"text":""}'
+                  lore:
+                  - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Was
+                    meant to be for the Museum but now you have it"}],"text":""}'
+                  - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Art
+                    by @luxjii"}],"text":""}'
+                  - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Uncloneable"}],"text":""}'
+                  - '{"text":""}'
+                  - '{"extra":[{"bold":true,"italic":false,"color":"gold","text":"Trick-Or-Treat
+                    2023"}],"text":""}'
+                  - '{"text":""}'
+                  PublicBukkitValues:
+                    antimapclone:uncloneable: 1i
+                  map-id: 4814
+            any: false
+          nqitemamount: 1
+  TrickOrTreat_2023_Eira:
+    limits:
+      completions: 1
+    objectives:
+      '1':
+        objectiveType: Objective
+        progressNeededExpression: '1'
+        specifics:
+          objectiveHolderName: ''
+    displayName: '"Trick-or-Treat at Mining District"'
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2023
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    rewards:
+      '1':
+        actionType: GiveItem
+        specifics:
+          itemStackSelection:
+            itemStacks:
+              '1':
+                ==: org.bukkit.inventory.ItemStack
+                v: 3465
+                type: PLAYER_HEAD
+                meta:
+                  ==: ItemMeta
+                  meta-type: SKULL
+                  display-name: '{"extra":[{"italic":false,"color":"gold","text":"Candy
+                    Bowl"}],"text":""}'
+                  lore:
+                  - '{"extra":[{"italic":false,"color":"white","text":"A bowl full
+                    of candy with some pumpkin on the top rim"}],"text":""}'
+                  - '{"text":""}'
+                  - '{"extra":[{"bold":true,"italic":false,"color":"gold","text":"Trick-Or-Treat
+                    2023"}],"text":""}'
+                  skull-owner:
+                    ==: PlayerProfile
+                    uniqueId: 04049c90-d3e9-4621-9caf-0000aaa57607
+                    properties:
+                    - name: textures
+                      value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDJhZjk3MjQ0NWVlMWM0NmIxMGNiMmY5MGFhOTE3NDE1NTJjMGQyN2VjNmJiMWU2MzAxOWMxNzFiOGI4YTFkOCJ9fX0=
+            any: false
+          nqitemamount: 1
+  TrickOrTreat_2023_Scott:
+    objectives:
+      '1':
+        objectiveType: Objective
+        progressNeededExpression: '1'
+        specifics:
+          objectiveHolderName: ''
+    limits:
+      completions: 1
+    displayName: '"Trick-or-Treat at Pride District"'
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2022
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    rewards:
+      '1':
+        actionType: GiveItem
+        specifics:
+          itemStackSelection:
+            itemStacks:
+              '1':
+                ==: org.bukkit.inventory.ItemStack
+                v: 3465
+                type: PLAYER_HEAD
+                meta:
+                  ==: ItemMeta
+                  meta-type: SKULL
+                  display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Halloween
+                    Cupcake"}],"text":""}'
+                  lore:
+                  - '{"extra":[{"italic":false,"color":"white","text":"A pumpkin flavoured
+                    cupcake."}],"text":""}'
+                  - '{"text":""}'
+                  - '{"extra":[{"bold":true,"italic":false,"color":"gold","text":"Trick-Or-Treat
+                    2023"}],"text":""}'
+                  skull-owner:
+                    ==: PlayerProfile
+                    uniqueId: 04049c90-d3e9-4621-9caf-0000aaa32605
+                    properties:
+                    - name: textures
+                      value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDk3YWQ5OWQ1M2FhY2NlNmI3YTg0ZDg3NGU2N2I4YzU2ZmFkZWRmZGY2YTI1NjVjNzYyNmNlZmJmYzMwYzM1MSJ9fX0=
+            any: false
+          nqitemamount: 1

@@ -1,0 +1,77 @@
+actions:
+  2023_FestiveScavengerHunt_Givebook:
+    actionType: GiveItem
+    displayName: 2023_FestiveScavengerHunt_Givebook
+    specifics:
+      itemStackSelection:
+        itemStacks:
+          '1':
+            ==: org.bukkit.inventory.ItemStack
+            v: 3465
+            type: WRITTEN_BOOK
+            meta:
+              ==: ItemMeta
+              meta-type: BOOK_SIGNED
+              title: Olivers Journal
+              author: Oliver
+              pages:
+              - '["",{"text":"6:30 - Today is a big day! It\u2019s delivery day! I''m
+                ready to go! I\u2019ve just come through the portal to this new place
+                and it''s INCREDIBLE! I need to go explore! I\u2019m here nice and
+                early so have plenty of time. Off I go! Down "},{"text":"the forest
+                path","color":"dark_green"},{"text":", the sticks along the path sure
+                were sharp!","color":"reset"}]'
+              - '["",{"text":"9:00- I headed over to mining district to start my journey,
+                on the way I passed the most amazing Japanese "},{"text":"hot springs","color":"dark_green"},{"text":".
+                I made my way up the mountain, it was cold (like back home) so I visited
+                ","color":"reset"},{"text":"the pub","color":"dark_green"},{"text":"
+                to warm up. Then I explored the mines, I got a bit lost in ","color":"reset"},{"text":"the","color":"dark_green"},{"text":"
+                cave tunnels","color":"dark_green"},{"text":". ","color":"reset"}]'
+              - '["",{"text":"11:00 - I walked over to harbour district. It was so
+                nice and sunny, I decided to get an "},{"text":"ice cream","color":"dark_green"},{"text":"!
+                It was delicious. The kind lady who served me told me about a ","color":"reset"},{"text":"hidden
+                tiki bar","color":"dark_green"},{"text":" on one of the islands over
+                the bridge, so I decided to check it out. It was so cool! ","color":"reset"}]'
+              - '["",{"text":"1:30- I took the train to the museum. I was getting
+                hungry so I was glad to see a "},{"text":"sandwich shop","color":"dark_green"},{"text":"
+                when I arrived.  The museum had lovely gardens, with a ","color":"reset"},{"text":"hedge
+                maze","color":"dark_green"},{"text":" which featured giant animal
+                statues! I went to get a drink at the ","color":"reset"},{"text":"inn","underlined":true},{"text":"
+                and saw the best ","color":"reset"},{"text":"climbing tree","color":"dark_green"},{"text":"!
+                ","color":"reset"}]'
+              - '["",{"text":"4:00- Next up was the mystical mushroom district. I''ve
+                never seen anything like it! I walked along the path up the mountain
+                to "},{"text":"the view point","color":"dark_green"},{"text":" to
+                get a better look. I popped into ","color":"reset"},{"text":"the library","color":"dark_green"},{"text":",
+                you could say I was a fun guy inside a fungi! Then I had a go on the
+                ","color":"reset"},{"text":"tree swing ","color":"dark_green"},{"text":"before
+                heading","color":"black"},{"text":" to pride.","color":"reset"}]'
+              - '["",{"text":"6:00- Wow! What a beautiful rainbow! All this travelling
+                works up an appetite, and I could smell my favourite food... I followed
+                the smell to "},{"text":"the pizzeria. ","color":"dark_green"},{"text":"The
+                chef was strangely furry. I took the pizza up to ","color":"reset"},{"text":"the
+                rooftops","color":"dark_green"},{"text":" to look over pride city
+                as I ate. Now to head back to the central.","color":"reset"}]'
+              - '["",{"text":"7:30-On my way back, I spotted a tunnel off the path.
+                It led to "},{"text":"a huge stadium","color":"dark_green"},{"text":"!
+                When I got to central I passed a ","color":"reset"},{"text":"duck
+                pond ","color":"dark_green"},{"text":"and fed them some of my crusts
+                from earlier. Then I strolled around central past ","color":"reset"},{"text":"a
+                shrine to ","color":"dark_green"},{"text":"the avatar","italic":true,"color":"dark_green"},{"text":"?
+                before arriving at the post office.","color":"reset"}]'
+              - '{"text":"7:34 - It\u2019s a disaster!!! I just arrived at the post
+                office and there are presents missing! There\u2019s a hole in my bag!
+                I don\u2019t know what to do!\n\n7:41 - I have searched through my
+                magical bag checking items and have made a list of all the missing
+                gifts:\n "}'
+              - '["",{"text":"-Bozz\u2019s Wall-E\n-Toz\u2019s recipe books\n-Dish\u2019s
+                record player\n-Adzuboin\u2019s pop vinyl figure\n-JaytheKay\u2019s
+                Polaroid camera\n-Megan\u2019s bunny plush\n-Marsbar\u2019s Lego set\n-Tweet\u2019s
+                pigeon plush\n-RM\u2019s command block \n-Bearcies\u2019 teddy bear\n-Starlion\u2019s
+                pink lion\n...","color":"dark_red"},{"text":"\n ","color":"reset"}]'
+              - '["",{"text":"-PridePooch\u2019s dog stuffie \n-Carryon\u2019s necklace\n-Alyssa\u2019s
+                play-doh\n-Joseph\u2019s duck toy\n-Lhoxris\u2019 stuffed goat\n-SirBinx\u2019s
+                gemstone","color":"dark_red"},{"text":"\nThat\u2019s 17 altogether.
+                I hope someone will help me find them!","color":"reset"}]'
+        any: false
+      nqitemamount: 1

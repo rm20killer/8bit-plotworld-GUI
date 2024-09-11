@@ -4,22 +4,44 @@ Lines:
     color: <GOLD>
     greeting:
       text: <white>Howdy, %essentials_nickname%, What can I do for ya?
-      next: Player.duos, Player.heads, Player.block, Player.other
+      next: Player.duos, Player.heads, Player.block, Player.armour, Player.interact,
+        Player.setblock, Player.other
     help:
-      next: Player.duos, Player.heads, Player.block, Player.other
+      next: Player.duos, Player.heads, Player.block, Player.armour, Player.interact,
+        Player.setblock, Player.other
+    other:
+      text: <white>Feel free to ask in discord or a mod for any other questions.
+      next: Dusty.help
     duo:
-      text: <white>Yes, but you will forfeit your ability to win a premium plot.
+      text: <white>Yes, but you will forfeit your ability to win a premium plot. Just
+        <aqua><underlined><click:SUGGEST_COMMAND:/plots trust>/plots trust</underlined></aqua>
       next: Dusty.help
     heads:
       text: <white>Yes, you have access to <aqua><underlined><click:SUGGEST_COMMAND:/hdb>/hdb</underlined></aqua>
       next: Dusty.help
     blocks:
       text: <white>Yes, you can access them using <aqua><underlined><click:SUGGEST_COMMAND:/block>/block</underlined></aqua>
+        or <aqua><underlined><click:SUGGEST_COMMAND:/bu special>/bu special</underlined></aqua>
       next: Dusty.help
-    other:
-      text: <white>Feel free to ask in discord or a mod for any other questions.
+    armour:
+      text: <white>Yes, you can use custom armour stands using <aqua><underlined><click:SUGGEST_COMMAND:/astools>/astools</underlined></aqua>
+        but if an excessive amount are found a per plot limit will be added
       next: Dusty.help
-  
+    interact:
+      text: <white>Plots are protected from other players, but if you want to allow
+        others to interact with your plot, you can use <aqua><underlined><click:SUGGEST_COMMAND:/plots
+        flag set>/plots flag set</underlined></aqua>. For more info about flags look
+        at <hover:show_text:"<red>Click to go to wiki"><aqua><underlined><click:OPEN_URL:https://intellectualsites.gitbook.io/plotsquared/features/plot-flags>the
+        wiki</underlined></aqua>
+      next: Dusty.help
+    setblock:
+      text: <white>quickly change your floor or remove the stone under the floor you
+        can do it in <aqua><underlined><click:SUGGEST_COMMAND:/plotm>/plotm</underlined></aqua>
+        -> command block-> axe. But make sure you read all the items before you use
+        it or use <aqua><underlined><click:SUGGEST_COMMAND:/plot set>/plot set [floor/main/all]
+        [blocks]</underlined></aqua>. Blocks can be in world edit format if you want
+        to set multiple blocks. <red>Those command will remove anything in the way
+      next: Dusty.help
   Player:
     other:
       text: <italic><gray>[Other Questions]
@@ -33,6 +55,15 @@ Lines:
     block:
       text: <white>Can I use light blocks, barriers etc??
       next: Dusty.blocks
+    armour:
+      text: <white>Can I use custom armour stands?
+      next: Dusty.armour
+    interact:
+      text: <white>Other players cant interact with doors/chest/button in my plot?
+      next: Dusty.interact
+    setblock:
+      text: <white>How do i quickly remove the stone or floor in my plot?
+      next: Dusty.setblock
 
 
 

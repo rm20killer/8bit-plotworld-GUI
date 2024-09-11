@@ -1,0 +1,38 @@
+start: Damien.firsttime, Damien.greeting1
+Lines:
+  Damien:
+    color: <GOLD>
+    firsttime:
+      text: <white>Hello, I'm Damien. How can one help on this fine day?
+      next: Player.trickortreat
+      conditions:
+      - '!CompletedQuests contains TrickOrTreat_2023_Damien'
+    greeting1:
+      text: <white>Welcome back, We not open for business yet. come back later.
+      next: Player.bye
+      conditions:
+      - CompletedQuests contains TrickOrTreat_2023_Damien
+    trickortreat:
+      text: <white>May not have a treat but I do have this Art that was meant to be
+        put in the Museum for an exhibit. Dont't tell the Museum's owner, Aduzboin,
+        that I gave you that piece or they might fire me.
+      next: Player.thankyou
+  Player:
+    color: <WHITE>
+    trickortreat:
+      text: Trick or treat!
+      actions:
+      - GiveQuest TrickOrTreat_2023_Damien --forceGive
+      next: Damien.trickortreat
+    bye:
+      text: Bye!
+    thankyou:
+      text: Thank you!
+      actions:
+      - CompleteQuest TrickOrTreat_2023_Damien
+npcIDs:
+- 3
+npcs:
+  citizens-3:
+    type: citizens
+    integerID: 3

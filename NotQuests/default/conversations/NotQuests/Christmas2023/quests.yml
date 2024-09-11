@@ -1,0 +1,87 @@
+quests:
+  FestiveScavengerHunt_2023:
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2022
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    limits:
+      completions: 1
+    displayName: Help Oliver
+    objectives:
+      '1':
+        taskDescription: collect all 17 heads
+        objectiveType: Condition
+        progressNeededExpression: '1'
+        specifics:
+          condition: AllHoildayHeadsCollected2
+          checkOnlyWhenCorrespondingVariableValueChanged: false
+    predefinedProgressOrder:
+      firstToLast: true
+    triggers:
+      '1':
+        triggerType: BEGIN
+        triggerActionName: 2023_FestiveScavengerHunt_Givebook
+        applyOn: 0
+        amountNeeded: 1
+        worldName: ALL
+  FestiveClaimReward_2023:
+    requirements:
+      '1':
+        conditionType: Date
+        progressNeeded: 1
+        negated: false
+        description: ''
+        specifics:
+          year: 2022
+          month: -1
+          day: -1
+          hours: -1
+          minutes: -1
+          seconds: -1
+          operation: before
+          timeZone: GMT
+    limits:
+      completions: 1
+    displayName: Talk to Oliver
+    description: Talk to Oliver to claim your reward
+    objectives:
+      '1':
+        objectiveType: Objective
+        progressNeededExpression: '1'
+        specifics:
+          objectiveHolderName: Talk to Oliver to claim reward.
+    rewards:
+      '1':
+        actionType: GiveItem
+        specifics:
+          itemStackSelection:
+            itemStacks:
+              '1':
+                ==: org.bukkit.inventory.ItemStack
+                v: 3465
+                type: LIME_SHULKER_BOX
+                meta:
+                  ==: ItemMeta
+                  meta-type: TILE_ENTITY
+                  display-name: '{"extra":[{"italic":false,"color":"#63FB10","text":"v"},{"italic":false,"color":"white","text":"^"},{"italic":false,"color":"#FFA218","text":"v"},{"italic":false,"color":"#63FB10","text":"^"},{"italic":false,"color":"white","text":"v"},{"italic":false,"color":"#FFA218","text":"^"},{"bold":true,"italic":false,"color":"white","text":"
+                    Oliver''s Holiday Helper Prize "},{"italic":false,"color":"#63FB10","text":"^"},{"italic":false,"color":"white","text":"v"},{"italic":false,"color":"#FFA218","text":"^"},{"italic":false,"color":"#63FB10","text":"v"},{"italic":false,"color":"white","text":"^"},{"italic":false,"color":"#FFA218","text":"v"}],"text":""}'
+                  lore:
+                  - '{"extra":[{"italic":false,"color":"white","text":"Reward for
+                    helping Oliver and saving the holidays!"}],"text":""}'
+                  - '{"extra":[{"italic":true,"color":"gray","text":"Winter Hoilday
+                    2023"}],"text":""}'
+                  internal: H4sIAAAAAAAA/+2ZTW/jxhnH6V0v4nXapAX6dlSVQ1N0DyQl2paBHCSR1ErYGa68lOiZoglkiRY5nJEcilqJDHLsoeilQIB2CwRF35IC28O2QD9Dv0C/QW/9Fn3oza4lOpIsIBYWsA+GXv6Ph0POb57n/4x2JWlXeqfCh93AGER+FNud/o50x+9J3xf+wO2GndPocOSNeeCGH50MpzvSbnU8ioYCd4R759ef5N1pFHbyhz//JO9HHe5384enHT5yH+S7Qz4M84f59/YKZkWR8w/yEcTCF0/znz5YGD3x/Mi9iP1wWex7pllWlYMrjnxpHkvHzsxj+cjZebwc+WTIe/nDKBxD6NWukrO4/9QNfzLKPRxyv9eJcw9dfuaGucehn7i5N+ru3ojV/sXrD/lP70v36pErRruSJL27JW0/4cNoa1e6G3X6u9JbPX90xjvxjrSdgrv17yuAm5lcddnkQrd3EdlZ45YHVx61t8ao8bLY2OV8OJmh7spTWPoIMlNY+hDmRl36CDKjutk13340DN0dWPItqfl1a/py+70arR924ovBHH8QweZ6tddUWS3MDw+pcfdJMObcmgzcED48DoewHSPfHd2XdtKwceieA7e1I91rd/jYlf7hxg2ZHnty77jBu3F9Dz7bT2Ru1dnZfn3Qjk+q9b26AP1hee9RXJqJ1aKOo3FSaHh00ByfiLb8qHDE3YdHSle0niJRj5FNplhtxjhpKUSgGNVIkbIeR0kfXpsatZtFbPdBbypUtBmyqU+YIZOkW8CCFJBtQFxQJPD/1O77p8dKSZLelu7Ue3AT29vbn//mP/8zf/z5C6gKz3/4cfpU71WH40G0dakmpLsJSoLndnrSV7tte9Fu++cVdls/zZavn/1/Xzxfg4qlBGdxr3qhP4pEZ/RNXSAz82e/vK6ZP4k64TVN+sXfr2Vj+fyb21j/uq6NhZN6AdstzdK5h0QTNssRt3TPR2q9QO2uYtWwjxIskNqcoqSsYburIUEULBoCiVZC7Z6Haq0YC6NAWGuCVByQuFE6PZY/WLC5nv/1V+M1N9dbt6XstpTdlrINlbL7C3ab9OXsyrx0+F8tc2bVx4OeG3K4xkXEKAr9wI28cDjue6+/HZ6cjkfdTjQT+GqNe50w+GgOsEpnfMLdnBUOYDKDKPd+GpKDkJ++8TRdW/4mCRUYaCDqESMJmtCaoVK7PrV0lFCGA8suJ5hRhpIu5GYUY9WYILs7ISyIrRr1kd32sdNSkN2fAlkytQ2FPlmev79sPr0g6u5ViNpdRNQfNknUCazEEppS+QaTZOlUAC1TIhoBtT1GdQLOoD6hwpiQpOdBTlKR0+ZYxV5KFLUxwzUkW7oJsWmOagjCmglOjJg6bQ+LOvC2iqT+miS9vYikP2+SpGzpvcTSy4AbTBNJKgFxIN+kRCWcQ6VTcUIKlBENQ25CDHtUb4GfTPOPoeGkDRWurBHRmiIGLrLWFpZe4cQG7+kAcWp9gv1VNEVr0vStRTQ933il64euO1hV686DbjJVjEywA3QwJGMV6h3rMQw5ierQxbBuTPXzbiTBek/g9FWgCdJJgiFXWbbp46SvoZQ0u14ED6UCnXJ9oJROmx8soepsTaq+vYCquz+7ZI8vFmvmpE9TNXWGhHNbPSPvl2blTlYuy7PyOCtX92flk6xsmLMyn5eNfXNOduflqjwv5+blUmletublfWVeDudlTQW5lO025uQDZeFjSeXyzPGpuCxXzYU3lsrm3pJrG3DnF3KUlSsHs3IuK5eUWfn9rLxXnpUzj2VPSSe38L4PDuZlf14um/Ny5sb0/Xk5S4sxLw+zMGmqPvPMJ5flysyK3eC0hmxTELtZIHZXtWr1guW0wGpB6wd2ijpGEYqfTNRWkdYwFESTQQHVqGhByusXkGNyyw4gnaWpDk1wcsQh4QmysliSNdPaO4uK5Z82WSzTFCZXK0sq5Zk/CG4wTFZa+xxwWDVjiuweBy8P3r0PHr5bxPCeJM2YgBMjrOGD21KoTSYQqyKAizqmhxh0giopYgZ9gJ7WS+gkq6tg6q4J07uLYPrLRmEqy6psystgGodn/Ca3hZBrplQPJmDCAY96YtWaE8o4w6mBt4lK1KYCuUulNkqIDQY+KYP94gFK+gll0AY6qABGrYAY5WDNJhBXQCsPGNw1cfrOIpz+tlmcdP3A2FuCE/f7XpS74ScNiAUxTjAjKUTQG6YIIRVNEZQ5qnen1OYeFU0N2YCRc8SIMKZYT08h6gpKPN+qAUp6oFEHB5iZHhbYxyszlLcmUt9dhNQfN4nUqrbwpneEWDc5TpCMakcBrqUWCFKTDv1hEhSJSL9vasRpBwjsFdINGektsFlQIfU0JTUYsBOQhPtYbxXPz0jttsAr09PHa7L0vUUs/W6j6UmWS3uzhr0CS5N7DIsFKN1ghJx6ETut2HII/LWZ5RgaVCrZ0hvgttu+BW4bOQ1IV00FswqYJhMq2RGjuqFQvceobQaWDibKpoARUrBoadaKdPTFZ8/W/FHmB4sQerZRhDS5erA/09TV0vxzyxBiHqQRzCy9KVtph1ajAtnlhNZaKnRwwEa/mP5MDoYa3BGKoeQBX90iYX0oeefcxOkhFUla07T04cTjeMXh+Ref/X5Nhn60iKHfbpQhvaoUC9WLpT5ye7cEQQECfjyBbeDIoQILBKSUC5RV4F1LJUnbh8wysdJzAihakLESoA0yFYICZwBJnp/+ZEzsI4HAFKU/z6w8AzjWrkqQJP0fKKpUbS0rAAA=
+                  blockMaterial: LIME_SHULKER_BOX
+            any: false
+          nqitemamount: 1

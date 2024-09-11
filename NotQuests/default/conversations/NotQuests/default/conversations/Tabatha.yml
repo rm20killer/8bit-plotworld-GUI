@@ -1,0 +1,38 @@
+start: Tabatha.firsttime, Tabatha.greeting1
+Lines:
+  Tabatha:
+    color: <GOLD>
+    firsttime:
+      text: <white>Hello, I'm Tabatha. I welcome you to my mystical forest.
+      next: Player.trickortreat
+      conditions:
+      - '!CompletedQuests contains TrickOrTreat_2023_Tabatha'
+    greeting1:
+      text: <white>Welcome back, I not open for business yet. come back later.
+      next: Player.bye
+      conditions:
+      - CompletedQuests contains TrickOrTreat_2023_Tabatha
+    trickortreat:
+      text: <white>So your here for the candy? Well I don't have candy but I have
+        this apple from a Evil Queen. Just be careful, I heard that it can put someone
+        into a deep sleep with one bite.
+      next: Player.thankyou
+  Player:
+    color: <WHITE>
+    trickortreat:
+      text: Trick or treat!
+      actions:
+      - GiveQuest TrickOrTreat_2023_Tabatha --forceGive
+      next: Tabatha.trickortreat
+    bye:
+      text: Bye!
+    thankyou:
+      text: Thank you!
+      actions:
+      - CompleteQuest TrickOrTreat_2023_Tabatha
+npcIDs:
+- 0
+npcs:
+  citizens-0:
+    type: citizens
+    integerID: 0

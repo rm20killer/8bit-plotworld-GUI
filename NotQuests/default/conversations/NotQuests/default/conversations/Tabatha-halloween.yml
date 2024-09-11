@@ -1,0 +1,22 @@
+start: Tabatha.trickortreat
+Lines:
+  Tabatha:
+    color: <GOLD>
+    trickortreat:
+      text: <white>So your here for the candy? Well I don't have candy but I have this apple
+        from a Evil Queen. Just be careful, I heard that it can put someone into a
+        deep sleep with one bit.
+      next: Player.thankyou
+  Player:
+    color: <WHITE>
+    trickortreat:
+      text: Trick or treat!
+      next: Tabatha.trickortreat
+    bye:
+      text: Bye!
+    thankyou:
+      text: Thank you!
+      actions:
+      - CompleteQuest TrickOrTreat_2023_Tabatha 
+npcIDs:
+- 0

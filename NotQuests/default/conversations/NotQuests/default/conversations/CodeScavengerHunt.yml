@@ -1,0 +1,142 @@
+start: Oliver.hello,Oliver.questions,Oliver.thanks,Oliver.thanksReward
+Lines:
+  Oliver:
+    color: <Green>
+    hello:
+      text: <italic>Oh dear, what to do, what to do... <reset><white>Oh! Hello, I
+        didn't see you there! I'm Oliver.
+      next: Player.hello,Player.bye
+      conditions:
+      - '!CompletedQuests contains FestiveScavengerHunt_2023'
+      - '!ActiveQuests contains FestiveScavengerHunt_2023'
+    firstgreeting:
+      text: <white>Well you see, I’ve been assigned to the 8-Bit community server
+        for this Holiday season! I figured I'd arrive early to get the job done as
+        journeying through the cosmos does take a bit of time haha.
+      next: Player.continue1
+    part1:
+      text: <white>Truth is Santa tasked me with delivering the gifts for the 8 Bit
+        Community this year as to lessen the load for the big guy! Well, thank goodness
+        you are here, I assume you are a resident of this 8-Bit community?
+      next: Player.continue2
+    part2:
+      text: <white>Oh that's a relief, I almost followed a rabbit's advice that would've
+        told me to take a left at Albuquerque. Good thing I didn't listen to him,
+        he doesn't seem to know whether it's truly Duck season or Rabbit season, (tbh
+        he and the duck were reeaallllyyy going at it).
+      next: Player.continue3
+    part3:
+      text: <white>Anyways, my dilemma is that after I came through the portal, I
+        was greeted by stunning beauty of this server's spawn and shopping districts
+        that I simply needed to explore.
+      next: Player.continue4
+    part4:
+      text: <white>Upon my arrival I was also greeted by a handsome er... Starlion
+        fella? The mystical keeper of the portal to this wonderful land, he told me
+        of the great railway system I could use to get around and sent me on my way.
+      next: Player.continue5
+    part5:
+      text: <white>However once I had been around the entirety of the aforementioned
+        areas, and on my way here to the central post office, I noticed that my magical
+        bag had a hole and lots of presents are gone! It’s a disaster! I can't leave
+        all these other presents here but I need to find all the presents or the holidays
+        will be ruined!
+      next: Player.YesHelp,Player.NoHelp
+    instructions:
+      text: <white>Thank you! I wrote about all the places I visited in my journal.
+        I also made a note of everything that’s missing. That should help you find
+        all the missing presents. The missing gifts around spawn will shimmer with
+        red christmas magic, which will turn green when found. Once you find all the
+        lost gifts, come back and let me know! If you have any questions come and
+        talk to me.
+      next: Player.okay
+    questions:
+      text: <white>Hello again, do you have any questions?
+      next: Player.WhatToDo,Player.Count
+      conditions:
+      - ActiveQuests contains FestiveScavengerHunt_2023
+      - '!CompletedQuests contains FestiveScavengerHunt_2023'
+    WhatToDo:
+      text: <white>I wrote about all the places I visited in my journal. I also made
+        a note of everything that’s missing. That should help you find all the missing
+        presents. The missing gifts around spawn will shimmer with red christmas magic,
+        which will turn green when found. Once you find all the lost gifts, come back
+        and let me know!
+      next: Player.Count,Player.okay
+    Count:
+      text: <white> If you run the command <aqua><underlined><click:run_command:/headblocks
+        progress><hover:show_text:'<red>left clicking will run the command'>/headblocks
+        progress</hover></click></underlined><white> you will see how many you have
+        collected. But if you want more info on what presents you are missing, you
+        can do <aqua><underlined><click:run_command:/headblocks me><hover:show_text:'<red>left
+        clicking will run the command'>/headblocks me</hover></click></underlined><white>
+      next: Player.WhatToDo,Player.okay
+    thanks:
+      text: <white>Thank you so much! The holidays are saved!
+      conditions:
+      - CompletedQuests contains FestiveScavengerHunt_2023
+      - CompletedQuests contains FestiveClaimReward_2023
+    thanksReward:
+      text: <white>Thank you so much! The holidays are saved! Here is your reward
+      next: Player.NoPro
+      conditions:
+      - CompletedQuests contains FestiveScavengerHunt_2023
+      - '!CompletedQuests contains FestiveClaimReward_2023'
+      actions:
+      - GiveQuest FestiveClaimReward_2023 --forceGive
+      - ConsoleCommand luckperms user %player_name% permission unset headblocks.use
+  Player:
+    color: <WHITE>
+    hello:
+      text: Hi! What's wrong?
+      next: Oliver.firstgreeting
+    continue1:
+      text:
+      - continue
+      next: Oliver.part1
+    continue2:
+      text: I am.
+      next: Oliver.part2
+    continue3:
+      text:
+      - continue
+      next: Oliver.part3
+    continue4:
+      text:
+      - continue
+      next: Oliver.part4
+    continue5:
+      text:
+      - continue
+      next: Oliver.part5
+    YesHelp:
+      text: I will help you find them!
+      actions:
+      - GiveQuest FestiveScavengerHunt_2023 --forceGive
+      - ConsoleCommand luckperms user %player_name% permission set headblocks.use
+        true
+      next: Oliver.instructions
+    NoHelp:
+      text: Sorry, I can't help right now. Bye.
+    okay:
+      text: Okay, Bye!
+    WhatToDo:
+      text: What do I need to do again?
+      next: Oliver.WhatToDo
+    Count:
+      text: How many have I found?
+      next: Oliver.Count
+    bye:
+      text: Bye!
+    NoPro:
+      text: Glad to help. Thanks for the gift
+      actions:
+      - CompleteQuest FestiveClaimReward_2023
+
+
+npcIDs:
+- 6
+npcs:
+  citizens-6:
+    type: citizens
+    integerID: 6

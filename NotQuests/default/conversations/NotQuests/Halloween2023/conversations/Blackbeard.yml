@@ -1,0 +1,37 @@
+start: Blackbeard.firsttime, Blackbeard.greeting1
+Lines:
+  Blackbeard:
+    color: <GOLD>
+    firsttime:
+      text: <white>Ahoy, matey! I be Blackbeard, and I be welcomin' ye to this fine
+        establishment. Arrr!
+      next: Player.trickortreat
+      conditions:
+      - '!CompletedQuests contains TrickOrTreat_2023_Blackbeard'
+    greeting1:
+      text: <white>Arrr, it be a sad day when the tavern be closed for drinks.
+      next: Player.bye
+      conditions:
+      - CompletedQuests contains TrickOrTreat_2023_Blackbeard
+    trickortreat:
+      text: <white>Ye can have this here candle, me heartie. It be glowin' inside
+        a skull I chanced upon whilst sailin' the deep blue.
+      next: Player.thankyou
+  Player:
+    trickortreat:
+      text: Trick or treat!
+      actions:
+      - GiveQuest TrickOrTreat_2023_Blackbeard --forceGive
+      next: Blackbeard.trickortreat
+    thankyou:
+      text: Ye be welcome, me matey!
+      actions:
+      - CompleteQuest TrickOrTreat_2023_Blackbeard
+    bye:
+      text: Bye!
+npcIDs:
+- -1
+npcs:
+  citizens-2:
+    type: citizens
+    integerID: 2

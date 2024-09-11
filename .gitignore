@@ -127,3 +127,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+/NotQuests/default/conversations/NotQuests/backups
+/NotQuests/default/conversations/NotQuests/languages
+*.db

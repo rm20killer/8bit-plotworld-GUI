@@ -1,0 +1,13 @@
+conditions:
+  TrickOrTreat_2023_Titan_HeadHunt:
+    conditionType: Boolean
+    progressNeeded: 1
+    negated: false
+    description: ''
+    hiddenStatusExpression: '0'
+    specifics:
+      variableName: TagBoolean
+      operator: equals
+      expression: 'true'
+      additionalStrings:
+        TagName: Test

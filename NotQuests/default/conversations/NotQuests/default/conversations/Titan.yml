@@ -1,0 +1,47 @@
+start: Titan.HeadHunt, Titan.greeting
+Lines:
+  Titan:
+    color: <GOLD>
+    HeadHunt:
+      text: <white> Hello, I hid some <gold>Trick-or-Treat Basket </gold><white>in
+        and around this building. Find all <red>10</red><white> to get an reward.
+      next: Player.bye, Player.HeadHuntHelp, Player.WhatReward, Player.Count
+      conditions:
+      - '!CompletedQuests contains TrickOrTreat_2023_Titan_HeadHunt'
+    HeadHuntHelp:
+      text: <white> The heads will have red particles on them if you have not found
+        them. If you did find them it will be green particles. There 1 on top of the
+        fireplace behind me if you want to see one up close.
+      next: Player.bye, Player.WhatReward, Player.Count
+    Reward:
+      text: <white> The reward will be the <gold>Trick-or-Treat Basket</gold><white>,
+        so better start hunting.
+      next: Player.bye, Player.HeadHuntHelp, Player.Count
+    Count:
+      text: <white> If you run the command <aqua><underlined><click:run_command:/headblocks
+        me><hover:show_text:'<red>left clicking will run the command'>/headblocks
+        me</hover></click></underlined><white> you will see how many you collected.
+      next: Player.bye, Player.HeadHuntHelp, Player.WhatReward
+    greeting:
+      text: Hello!
+      next: Player.bye
+      conditions:
+      - CompletedQuests contains TrickOrTreat_2023_Tabatha
+  Player:
+    bye:
+      text: Bye!
+    HeadHuntHelp:
+      text: What do they look like?
+      next: Titan.HeadHuntHelp
+    WhatReward:
+      text: What reward?
+      next: Titan.Reward
+    Count:
+      text: How many did I collect?
+      next: Titan.Count
+npcIDs:
+- -1
+npcs:
+  citizens-1:
+    type: citizens
+    integerID: 1

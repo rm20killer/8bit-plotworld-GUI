@@ -1,0 +1,27 @@
+conditions:
+  AllHoildayHeadsCollected2:
+    conditionType: Number
+    progressNeeded: 1
+    negated: false
+    description: ''
+    hiddenStatusExpression: '0'
+    specifics:
+      variableName: PlaceholderAPINumber
+      operator: equals
+      expression: '17'
+      additionalStrings:
+        Placeholder: '%headblocks_current%'
+      additionalBooleans:
+        removeTextFromPlaceholderValue: '0.0'
+  ClaimRewardFromOliver:
+    conditionType: Boolean
+    progressNeeded: 1
+    negated: false
+    description: ''
+    hiddenStatusExpression: '0'
+    specifics:
+      variableName: TagBoolean
+      operator: equals
+      expression: 'true'
+      additionalStrings:
+        TagName: talkedtooliver

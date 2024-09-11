@@ -1,0 +1,40 @@
+start: Scott.firsttime, Scott.greeting1
+Lines:
+  Scott:
+    color: <GOLD>
+    firsttime:
+      text: <white>hey there, I'm Scott. Your friendly neighbourhood warewolf. What
+        can i get you?
+      next: Player.trickortreat
+      conditions:
+      - '!CompletedQuests contains TrickOrTreat_2023_Scott'
+    greeting1:
+      text: <white>Sorry we are closed. No stock at the moment because of Halloween,
+        crazy that this was the only candy shop. You can pet Zoey on your way out
+        if you want.
+      next: Player.bye
+      conditions:
+      - CompletedQuests contains TrickOrTreat_2023_Scott
+    trickortreat:
+      text: <white>I ran out of candy but Toz upstairs made some cupcake you can have
+        one.
+      next: Player.thankyou
+  Player:
+    color: <WHITE>
+    trickortreat:
+      text: Trick or treat!
+      actions:
+      - GiveQuest TrickOrTreat_2023_Scott --forceGive
+      next: Scott.trickortreat
+    bye:
+      text: Bye!
+    thankyou:
+      text: Thank you!
+      actions:
+      - CompleteQuest TrickOrTreat_2023_Scott
+npcIDs:
+- -1
+npcs:
+  citizens-5:
+    type: citizens
+    integerID: 5
